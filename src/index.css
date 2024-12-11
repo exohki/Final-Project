@@ -1,0 +1,353 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFF4E4; /* Ivory Pearl */
+  font-family: 'Arial', sans-serif; /* Regular font for content */
+  color: #2B1A12; /* Almost Black */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Precious', sans-serif; /* Title font for headings */
+  color: #DC6D18; /* Tangy Orange */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #DC6D18;
+}
+
+/* Buttons */
+button {
+  background-color: #DC6D18; /* Tangy Orange */
+  color: #FFF4E4; /* Ivory Pearl */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2B1A12; /* Almost Black */
+}
+
+button:disabled {
+  background-color: #B1AA81; /* Limestone */
+  cursor: not-allowed;
+}
+
+/* Navigation Header */
+.menu-header {
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #DC6D18; /* Tangy Orange */
+  padding: 15px 20px;
+  color: #FFF4E4; /* Ivory Pearl */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-family: 'Precious', sans-serif; /* Only title uses Precious font */
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #FFF4E4;
+}
+
+.app-title:hover {
+  color: #B1AA81; /* Limestone */
+}
+
+/* Dropdown Menu */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-button {
+  background-color: #FFF4E4; /* Ivory Pearl */
+  color: #DC6D18; /* Tangy Orange */
+  border: 1px solid #DC6D18;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #F8E0C9; /* Cream Pop */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #FFF4E4; /* Ivory Pearl */
+  border: 1px solid #B1AA81; /* Limestone */
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #DC6D18; /* Tangy Orange */
+  font-weight: bold;
+}
+
+.dropdown-menu li a:hover {
+  color: #2B1A12; /* Almost Black */
+}
+
+/* Main Content Layout */
+main {
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* General Card Layout */
+.card {
+  background-color: #F8E0C9; /* Cream Pop */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #DC6D18; /* Tangy Orange */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #2B1A12; /* Almost Black */
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card a {
+  color: #DC6D18;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #2B1A12; /* Almost Black */
+}
+
+.card button {
+  margin-top: 10px;
+}
+
+/* Cards Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  padding: 15px;
+}
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #F8E0C9; /* Cream Pop */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #DC6D18; /* Tangy Orange */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #2B1A12; /* Almost Black */
+  line-height: 1.6;
+}
+
+.card a {
+  color: #DC6D18; /* Tangy Orange */
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #2B1A12; /* Almost Black */
+}
+
+/* Recipe Cards Container */
+.recipe-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+/* Recipe Card Styles */
+.recipe-card {
+  background-color: #FFF4E4; /* Ivory Pearl */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px; /* Consistent card width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe Image Styles */
+.recipe-card img {
+  width: 100%; /* Full card width */
+  height: 150px; /* Fixed height for uniformity */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Recipe Title */
+.recipe-card h3 {
+  font-size: 1.2rem;
+  color: #2B1A12; /* Almost Black */
+  margin-bottom: 10px;
+}
+
+/* Recipe Description */
+.recipe-card p {
+  font-size: 1rem;
+  color: #B1AA81; /* Limestone */
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Recipe Link */
+.recipe-card a {
+  display: inline-block;
+  background-color: #DC6D18; /* Tangy Orange */
+  color: #FFF4E4; /* Ivory Pearl */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* Add space between link and button */
+}
+
+.recipe-card a:hover {
+  background-color: #2B1A12; /* Almost Black */
+}
+
+/* Delete Button */
+.recipe-card button {
+  background-color: #ff6b6b; /* Soft red for delete button */
+  color: #FFF4E4; /* Ivory Pearl */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.recipe-card button:hover {
+  background-color: #e74c3c; /* Darker red */
+}
+
+/* Form for Adding Meals */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #B1AA81; /* Limestone */
+  border-radius: 5px;
+}
+
+form button {
+  align-self: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .recipe-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
